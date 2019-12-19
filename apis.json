@@ -1,0 +1,101 @@
+{
+    "name": "Paylocity",
+    "description": "<p>Paylocity has delivered industry-leading software and unmatched customer service since our inception. Our mission of elevating payroll and human resources across the backroom and into the boardroom speaks to just that. Today, Paylocity continues to develop innovative solutions that simplify the lives of payroll and HR professionals across the country. Through powerful analytics, robust reporting, intuitive usability, and modern functionality&mdash;our clients increase efficiency and manage workforces more effectively.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28482-paylocity.jpg",
+    "tags": [
+        "api provider",
+        "have api",
+        "have swagger",
+        "human resources",
+        "payroll",
+        "relative data",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/paylocity\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Paylocity",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28482-paylocity.jpg",
+            "humanURL": "http:\/\/www.paylocity.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/paylocity.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/paylocity-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/paylocity-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Website",
+            "url": "http:\/\/www.paylocity.com"
+        },
+        {
+            "type": "Blog",
+            "url": "https:\/\/www.paylocity.com\/resources\/blog\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/paylocity"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/Paylocity"
+        },
+        {
+            "type": "Integrations",
+            "url": "https:\/\/www.paylocity.com\/partnerships\/integrations\/"
+        },
+        {
+            "type": "LinkedIn",
+            "url": "https:\/\/www.linkedin.com\/company\/paylocity\/"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28482-2019-09-06-20-23-10.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28482-2019-09-03-13-13-15.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28482-2019-09-03-13-13-26.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28482-2019-09-03-13-13-31.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28482-2019-09-03-13-13-36.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/28482-2019-09-03-13-13-46.json"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/Paylocity"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/paylocity.com"
+        }
+    ]
+}
