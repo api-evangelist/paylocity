@@ -1,0 +1,748 @@
+{
+    "id": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+    "name": "Paylocity",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "53c5d7ce0dd87de1b4c51d4972fe2b9e",
+            "name": "Get All Custom Fields",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/customfields\/{category}",
+            "description": "Get All Custom Fields for the selected company",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "category",
+                    "description": "Custom Fields Category",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "446b04270595761ce78da2dde0f3b3e3",
+            "name": "Add new employee",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees",
+            "description": "New Employee API sends new employee data directly to Web Pay. Companies who use the New Hire Template in Web Pay may require additional fields when hiring employees. New Employee API Requests will honor these required fields.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "810ce9530f510c1e71cb12e0a5e30063",
+            "name": "Get employee",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}",
+            "description": "Get Employee API will return employee data currently available in Web Pay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "0e27217a94d6978b0e0ccd9c3198318d",
+            "name": "Update employee",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}",
+            "description": "Update Employee API will update existing employee data in WebPay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6abe1a74b26fde32af014626059e6b3d",
+            "name": "Add\/update employee's benefit setup",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/benefitSetup",
+            "description": "Sends new or updated employee benefit setup information directly to Web Pay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "34a17b04e315b7aa60f27e606f1e1f2b",
+            "name": "Get All Earnings",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings",
+            "description": "Get All Earnings returns all earnings for the selected employee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "ab4d562593a935b3e85264f34c7f028c",
+            "name": "Add\/Update Earning",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings",
+            "description": "Add\/Update Earning API sends new or updated employee earnings information directly to Web Pay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "10732763fe8c346b9b2ec4dd0421224b",
+            "name": "Get Earnings by Earning Code",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings\/{earningCode}",
+            "description": "Get Earnings returns all earnings with the provided earning code for the selected employee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "earningCode",
+                    "description": "Earning Code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "f7fcbdb035190f0108038b31bc04985e",
+            "name": "Delete Earning by Earning Code and Start Date",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings\/{earningCode}\/{startDate}",
+            "description": "Delete Earning by Earning Code and Start Date",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "earningCode",
+                    "description": "Earning Code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startDate",
+                    "description": "Start Date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "84aaadb23026919ccbefe5e73f157eb6",
+            "name": "Get Earning by Earning Code and Start Date",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings\/{earningCode}\/{startDate}",
+            "description": "Get Earnings returns the single earning with the provided earning code and start date for the selected employee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "earningCode",
+                    "description": "Earning Code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startDate",
+                    "description": "Start Date",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "33e3c9a27d156e0f7242c444dbf2ad1f",
+            "name": "Get all local taxes",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes",
+            "description": "Returns all local taxes for the selected employee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "41156f1daa1f7eb2164f95d980b2fff4",
+            "name": "Add new local tax",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes",
+            "description": "Sends new employee local tax information directly to Web Pay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "6a1e79f2b0599b171286fb00e2145d1e",
+            "name": "Delete local tax by tax code",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes\/{taxCode}",
+            "description": "Delete local tax by tax code",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "taxCode",
+                    "description": "Tax Code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "8d35c9eff51bda111d31e5b23a6ce60a",
+            "name": "Get local taxes by tax code",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes\/{taxCode}",
+            "description": "Returns all local taxes with the provided tax code for the selected employee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "taxCode",
+                    "description": "Tax Code",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "e96cee3bf7d6f1992d704f3a9e20d9be",
+            "name": "Add\/update non-primary state tax",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/nonprimaryStateTax",
+            "description": "Sends new or updated employee non-primary state tax information directly to Web Pay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "0ef3e43415e394e4576e67038f3a87cf",
+            "name": "Add\/update primary state tax",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/primaryStateTax",
+            "description": "Sends new or updated employee primary state tax information directly to Web Pay.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "employeeId",
+                    "description": "Employee Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "fc5878d89573a1824c4d64cdfde6539b",
+            "name": "Get Company-Specific Open API Documentation",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/openapi",
+            "description": "The company-specific Open API endpoint allows the client to GET an Open API document for the Paylocity API that is customized with company-specific resource schemas. These customized resource schemas define certain properties as enumerations of pre-defined values that correspond to the company's setup with Web Pay. The customized schemas also indicate which properties are required by the company within Web Pay.<br  \/>To learn more about Open API, click [here](https:\/\/www.openapis.org\/)",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "fe67b7b5c09bc31ea7d4422b06f9689e",
+            "name": "Obtain new client secret.",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/credentials\/secrets",
+            "description": "Obtain new client secret for Paylocity-issued client id. See Setup section for details.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        },
+        {
+            "id": "9692c85caa9d8c6ea10d9173739eb73c",
+            "name": "Add new employee to Web Link",
+            "url": "http:\/\/api.paylocity.com\/api\/v2\/weblinkstaging\/companies\/{companyId}\/employees\/newemployees",
+            "description": "Add new employee to Web Link will send partially completed or potentially erroneous new hire record to Web Link, where it can be corrected and competed by company administrator or authorized Paylocity Service Bureau employee.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "companyId",
+                    "description": "Company Id",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "rawModeData": ""
+        }
+    ]
+}
