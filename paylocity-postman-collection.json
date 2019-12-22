@@ -1,5 +1,5 @@
 {
-    "id": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+    "id": "62f35df9075fdaaeb5379fdda94f802c",
     "name": "Paylocity",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "53c5d7ce0dd87de1b4c51d4972fe2b9e",
+            "id": "37c35a7a44e64b72c0e70647bd90eaf7",
             "name": "Get All Custom Fields",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/customfields\/{category}",
             "description": "Get All Custom Fields for the selected company",
@@ -44,11 +44,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "446b04270595761ce78da2dde0f3b3e3",
+            "id": "08af4a8d3b08eb7f9cb8b406ea7389c6",
             "name": "Add new employee",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees",
             "description": "New Employee API sends new employee data directly to Web Pay. Companies who use the New Hire Template in Web Pay may require additional fields when hiring employees. New Employee API Requests will honor these required fields.",
@@ -75,11 +75,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "810ce9530f510c1e71cb12e0a5e30063",
+            "id": "e9a1d54a81e41abbc120c45b540a7afd",
             "name": "Get employee",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}",
             "description": "Get Employee API will return employee data currently available in Web Pay.",
@@ -113,11 +113,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "0e27217a94d6978b0e0ccd9c3198318d",
+            "id": "8ff92617e51eab644611922f167920b6",
             "name": "Update employee",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}",
             "description": "Update Employee API will update existing employee data in WebPay.",
@@ -151,11 +151,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "6abe1a74b26fde32af014626059e6b3d",
+            "id": "7a8fb3ce743ad3a311bab7b7c8a9a9a7",
             "name": "Add\/update employee's benefit setup",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/benefitSetup",
             "description": "Sends new or updated employee benefit setup information directly to Web Pay.",
@@ -189,11 +189,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "34a17b04e315b7aa60f27e606f1e1f2b",
+            "id": "ad0efa3bda06325f2647ac1b7b87d996",
             "name": "Get All Earnings",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings",
             "description": "Get All Earnings returns all earnings for the selected employee.",
@@ -227,11 +227,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "ab4d562593a935b3e85264f34c7f028c",
+            "id": "76a4782243f2033f8e1af36d91c676a0",
             "name": "Add\/Update Earning",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings",
             "description": "Add\/Update Earning API sends new or updated employee earnings information directly to Web Pay.",
@@ -265,11 +265,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "10732763fe8c346b9b2ec4dd0421224b",
+            "id": "9954c724fc3560b5c8a7d73124e7b708",
             "name": "Get Earnings by Earning Code",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings\/{earningCode}",
             "description": "Get Earnings returns all earnings with the provided earning code for the selected employee.",
@@ -310,11 +310,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "f7fcbdb035190f0108038b31bc04985e",
+            "id": "7a07f0ebd278868914c64e66801d0be0",
             "name": "Delete Earning by Earning Code and Start Date",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings\/{earningCode}\/{startDate}",
             "description": "Delete Earning by Earning Code and Start Date",
@@ -362,11 +362,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "84aaadb23026919ccbefe5e73f157eb6",
+            "id": "af5ce5f51aaea9eba2a0f78b169a8b59",
             "name": "Get Earning by Earning Code and Start Date",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/earnings\/{earningCode}\/{startDate}",
             "description": "Get Earnings returns the single earning with the provided earning code and start date for the selected employee.",
@@ -414,11 +414,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "33e3c9a27d156e0f7242c444dbf2ad1f",
+            "id": "c67c13b23809a3f28e10e03b99c4259a",
             "name": "Get all local taxes",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes",
             "description": "Returns all local taxes for the selected employee.",
@@ -452,11 +452,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "41156f1daa1f7eb2164f95d980b2fff4",
+            "id": "18002b5bd5886cf1f55124f7eb09c1f1",
             "name": "Add new local tax",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes",
             "description": "Sends new employee local tax information directly to Web Pay.",
@@ -490,11 +490,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "6a1e79f2b0599b171286fb00e2145d1e",
+            "id": "84396225f12d800d1fcf99f84ee98108",
             "name": "Delete local tax by tax code",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes\/{taxCode}",
             "description": "Delete local tax by tax code",
@@ -535,11 +535,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "8d35c9eff51bda111d31e5b23a6ce60a",
+            "id": "f67973d3eff820e54589dbe19de341c4",
             "name": "Get local taxes by tax code",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/localTaxes\/{taxCode}",
             "description": "Returns all local taxes with the provided tax code for the selected employee.",
@@ -580,11 +580,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "e96cee3bf7d6f1992d704f3a9e20d9be",
+            "id": "105fd7c5ac103368581315eab4ffa403",
             "name": "Add\/update non-primary state tax",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/nonprimaryStateTax",
             "description": "Sends new or updated employee non-primary state tax information directly to Web Pay.",
@@ -618,11 +618,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "0ef3e43415e394e4576e67038f3a87cf",
+            "id": "b51c7166a2b558b5ce9f2b86790d1b8a",
             "name": "Add\/update primary state tax",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/employees\/{employeeId}\/primaryStateTax",
             "description": "Sends new or updated employee primary state tax information directly to Web Pay.",
@@ -656,11 +656,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "fc5878d89573a1824c4d64cdfde6539b",
+            "id": "29b189ff3c2d17fd87891ad85d54aed4",
             "name": "Get Company-Specific Open API Documentation",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/companies\/{companyId}\/openapi",
             "description": "The company-specific Open API endpoint allows the client to GET an Open API document for the Paylocity API that is customized with company-specific resource schemas. These customized resource schemas define certain properties as enumerations of pre-defined values that correspond to the company's setup with Web Pay. The customized schemas also indicate which properties are required by the company within Web Pay.<br  \/>To learn more about Open API, click [here](https:\/\/www.openapis.org\/)",
@@ -687,11 +687,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "fe67b7b5c09bc31ea7d4422b06f9689e",
+            "id": "d5adae9c51b24cb7829d00fee12d7bd8",
             "name": "Obtain new client secret.",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/credentials\/secrets",
             "description": "Obtain new client secret for Paylocity-issued client id. See Setup section for details.",
@@ -710,11 +710,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         },
         {
-            "id": "9692c85caa9d8c6ea10d9173739eb73c",
+            "id": "4583fa0ecbd94b7ad56c5a1bba5ca8a0",
             "name": "Add new employee to Web Link",
             "url": "http:\/\/api.paylocity.com\/api\/v2\/weblinkstaging\/companies\/{companyId}\/employees\/newemployees",
             "description": "Add new employee to Web Link will send partially completed or potentially erroneous new hire record to Web Link, where it can be corrected and competed by company administrator or authorized Paylocity Service Bureau employee.",
@@ -741,7 +741,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "a93b78b9cef7d61e5cfa4bd4e16ecee9",
+            "collectionId": "62f35df9075fdaaeb5379fdda94f802c",
             "rawModeData": ""
         }
     ]
