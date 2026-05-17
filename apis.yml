@@ -44,7 +44,7 @@ apis:
     properties:
       - type: Documentation
         url: https://developer.paylocity.com/integrations/docs/getting-started
-      - type: API Reference
+      - type: APIReference
         url: https://developer.paylocity.com/integrations/reference/api-overview
       - type: Authentication
         url: https://developer.paylocity.com/integrations/reference/authentication
@@ -58,11 +58,11 @@ common:
     url: https://developer.paylocity.com
   - type: Documentation
     url: https://developer.paylocity.com/integrations/docs/getting-started
-  - type: API Reference
+  - type: APIReference
     url: https://developer.paylocity.com/integrations/reference/api-overview
   - type: Pricing
     url: https://www.paylocity.com/our-products/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://www.paylocity.com/request-a-demo/
   - type: Login
     url: https://access.paylocity.com/
