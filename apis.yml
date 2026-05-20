@@ -52,6 +52,10 @@ apis:
         url: https://apisandbox.paylocity.com
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/Paylocity
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/paylocity
   - type: Website
     url: https://www.paylocity.com
   - type: Developer Portal
