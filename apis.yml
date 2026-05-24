@@ -74,6 +74,8 @@ common:
     url: https://www.paylocity.com/support/
   - type: Blog
     url: https://www.paylocity.com/resources/
+  - type: LLMsTxt
+    url: https://developer.paylocity.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
