@@ -1,0 +1,690 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Paylocity Integrations REST API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://api.paylocity.com/IdentityServer/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Employees",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employees",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employees"
+        },
+        {
+          "info": {
+            "name": "Add a new employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a new employee"
+        },
+        {
+          "info": {
+            "name": "Get employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get employee"
+        },
+        {
+          "info": {
+            "name": "Update employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update employee"
+        },
+        {
+          "info": {
+            "name": "Onboard employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/onboarding",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Onboard employee"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Earnings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employee earnings",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/earnings",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee earnings"
+        },
+        {
+          "info": {
+            "name": "Upsert employee earning",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/earnings",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upsert employee earning"
+        },
+        {
+          "info": {
+            "name": "Get a specific earning entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/earnings/:earningCode/:startDate",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "earningCode",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific earning entry"
+        },
+        {
+          "info": {
+            "name": "Delete a specific earning entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/earnings/:earningCode/:startDate",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "earningCode",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a specific earning entry"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Deductions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employee deductions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/deductions",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee deductions"
+        },
+        {
+          "info": {
+            "name": "Upsert employee deduction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/deductions",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upsert employee deduction"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Taxes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List local taxes for employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/localtax",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List local taxes for employee"
+        },
+        {
+          "info": {
+            "name": "Add a local tax",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/localtax",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a local tax"
+        },
+        {
+          "info": {
+            "name": "Upsert primary state tax",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/statetax/primary",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upsert primary state tax"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Time",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit punch details batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/apihub/time/v2/companies/:companyId/punchdetails",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Submit punch details batch"
+        },
+        {
+          "info": {
+            "name": "Get punch details for an employee",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/apihub/time/v2/companies/:companyId/employees/:employeeId/punchdetails",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get punch details for an employee"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Scheduling",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List shifts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/apihub/scheduling/v1/companies/:companyId/shifts",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List shifts"
+        },
+        {
+          "info": {
+            "name": "List employee shifts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/apihub/scheduling/v1/companies/:companyId/employees/:employeeId/shifts",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee shifts"
+        },
+        {
+          "info": {
+            "name": "List open shifts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/apihub/scheduling/v1/companies/:companyId/openshifts",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List open shifts"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "LMS",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List LMS contents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/apihub/learningmanagementsystem/v1/companies/:companyId/contents",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List LMS contents"
+        },
+        {
+          "info": {
+            "name": "Create LMS content",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/apihub/learningmanagementsystem/v1/companies/:companyId/contents",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create LMS content"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Payroll",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a new payroll batch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/payentry/v2/payentryimport"
+          },
+          "docs": "Create a new payroll batch"
+        },
+        {
+          "info": {
+            "name": "Get payroll batch status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/payentry/v2/payentryimport/:timeImportFileTrackingId",
+            "params": [
+              {
+                "name": "timeImportFileTrackingId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get payroll batch status"
+        },
+        {
+          "info": {
+            "name": "List employee pay statements",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/apihub/payrollhistory/v1/companies/:companyId/employees/:employeeId/paystatements",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee pay statements"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Company",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all company codes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/codes",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List all company codes"
+        },
+        {
+          "info": {
+            "name": "Get company-specific OpenAPI document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/openapi",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get company-specific OpenAPI document"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Background Check",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List background check screening packages",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/compliance/backgroundcheck/screeningpackages"
+          },
+          "docs": "List background check screening packages"
+        },
+        {
+          "info": {
+            "name": "Create background check webhook subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/compliance/backgroundcheck/candidatescreeningorders/subscription"
+          },
+          "docs": "Create background check webhook subscription"
+        },
+        {
+          "info": {
+            "name": "Delete background check webhook subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.paylocity.com/compliance/backgroundcheck/candidatescreeningorders/subscription"
+          },
+          "docs": "Delete background check webhook subscription"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
