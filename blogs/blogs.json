@@ -3,19 +3,10 @@
   "feeds": [
     {
       "source": "https://www.paylocity.com/resources/",
-      "feed_url": "https://www.paylocity.com/resources/",
-      "title": "",
       "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://www.paylocity.com/support/",
-      "feed_url": "https://www.paylocity.com/support/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "error": "Listing page returned no scrapeable HTML (client-rendered)"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:00:44Z"
 }

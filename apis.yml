@@ -55,7 +55,7 @@ common:
   url: https://www.linkedin.com/company/paylocity
 - type: Website
   url: https://www.paylocity.com
-- type: Developer Portal
+- type: DeveloperPortal
   url: https://developer.paylocity.com
 - type: Documentation
   url: https://developer.paylocity.com/integrations/docs/getting-started
@@ -63,7 +63,7 @@ common:
   url: https://developer.paylocity.com/integrations/reference/api-overview
 - type: Pricing
   url: https://www.paylocity.com/our-products/pricing/
-- type: SignUp
+- type: Signup
   url: https://www.paylocity.com/request-a-demo/
 - type: Login
   url: https://access.paylocity.com/
@@ -71,7 +71,7 @@ common:
   url: https://www.paylocity.com/support/
 - type: Blog
   url: https://www.paylocity.com/resources/
-- type: LLMsTxt
+- type: LlmsText
   url: https://developer.paylocity.com/llms.txt
 maintainers:
 - FN: Kin Lane
