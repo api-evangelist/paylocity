@@ -49,6 +49,8 @@ apis:
   - url: graphql/paylocity-graphql.md
     type: GraphQL
 common:
+- type: OAuthScopes
+  url: scopes/paylocity-scopes.yml
 - type: GitHubOrganization
   url: https://github.com/Paylocity
 - type: LinkedIn

@@ -1,0 +1,22 @@
+generated: '2026-07-11'
+method: searched
+source: openapi/paylocity-openapi.yml
+docs: https://developer.paylocity.com/integrations/reference/authentication-weblink
+schemes:
+- name: oauth2ClientCredentials
+  source: openapi/paylocity-openapi.yml
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.paylocity.com/IdentityServer/connect/token
+  description: OAuth 2.0 client credentials grant. Credentials are provisioned by Paylocity.
+scopes:
+- scope: WebLinkAPI
+  description: Required scope for token requests to the Paylocity Weblink API via
+    the client credentials grant; the scope parameter of the token request must be
+    set to WebLinkAPI.
+  sources:
+  - https://developer.paylocity.com/integrations/reference/authentication-weblink
+note: Paylocity's Next Gen Integrations API authentication docs (https://developer.paylocity.com/integrations/reference/authentication)
+  use the OAuth 2.0 client credentials grant without documenting granular scopes;
+  WebLinkAPI is the only documented scope value, required for the legacy Weblink API
+  token request.
