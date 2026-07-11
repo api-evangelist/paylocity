@@ -49,6 +49,12 @@ apis:
   - url: graphql/paylocity-graphql.md
     type: GraphQL
 common:
+- type: VulnerabilityDisclosure
+  url: security/paylocity-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/paylocity-domain-security.yml
+- type: Authentication
+  url: authentication/paylocity-authentication.yml
 - type: OAuthScopes
   url: scopes/paylocity-scopes.yml
 - type: GitHubOrganization

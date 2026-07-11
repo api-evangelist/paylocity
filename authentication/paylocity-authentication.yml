@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/paylocity-openapi.yml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - clientCredentials
+schemes:
+- name: oauth2ClientCredentials
+  type: oauth2
+  flows:
+  - flow: clientCredentials
+    tokenUrl: https://api.paylocity.com/IdentityServer/connect/token
+    scopes: 0
+  description: OAuth 2.0 client credentials grant. Credentials are provisioned by Paylocity.
+  sources:
+  - openapi/paylocity-openapi.yml
