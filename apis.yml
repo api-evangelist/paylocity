@@ -49,6 +49,8 @@ apis:
   - url: graphql/paylocity-graphql.md
     type: GraphQL
 common:
+- type: AgenticAccess
+  url: agentic-access/paylocity-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/paylocity-vulnerability-disclosure.yml
 - type: DomainSecurity

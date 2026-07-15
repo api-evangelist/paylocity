@@ -1,0 +1,389 @@
+generated: '2026-07-15'
+method: generated
+source: openapi/paylocity-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 29
+  by_action_class:
+    connected: 16
+    acting: 13
+  by_consequence:
+    read: 16
+    write: 11
+    physical: 2
+  human_in_the_loop_required: 0
+operations:
+- path: /api/v2/companies/{companyId}/employees
+  method: get
+  operationId: listEmployees
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/employees
+  method: post
+  operationId: addEmployee
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}
+  method: get
+  operationId: getEmployee
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/employees/{employeeId}
+  method: patch
+  operationId: updateEmployee
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/onboarding
+  method: post
+  operationId: onboardEmployee
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/earnings
+  method: get
+  operationId: listEarnings
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/earnings
+  method: post
+  operationId: upsertEarning
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}
+  method: get
+  operationId: getEarning
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}
+  method: delete
+  operationId: deleteEarning
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/deductions
+  method: get
+  operationId: listDeductions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/deductions
+  method: post
+  operationId: upsertDeduction
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/localtax
+  method: get
+  operationId: listLocalTaxes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/localtax
+  method: post
+  operationId: addLocalTax
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v2/companies/{companyId}/employees/{employeeId}/statetax/primary
+  method: post
+  operationId: upsertPrimaryStateTax
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /apihub/time/v2/companies/{companyId}/punchdetails
+  method: post
+  operationId: createPunchDetails
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /apihub/time/v2/companies/{companyId}/employees/{employeeId}/punchdetails
+  method: get
+  operationId: getEmployeePunchDetails
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /apihub/scheduling/v1/companies/{companyId}/shifts
+  method: get
+  operationId: listShifts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /apihub/scheduling/v1/companies/{companyId}/employees/{employeeId}/shifts
+  method: get
+  operationId: listEmployeeShifts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /apihub/scheduling/v1/companies/{companyId}/openshifts
+  method: get
+  operationId: listOpenShifts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /apihub/learningmanagementsystem/v1/companies/{companyId}/contents
+  method: get
+  operationId: listLmsContents
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /apihub/learningmanagementsystem/v1/companies/{companyId}/contents
+  method: post
+  operationId: createLmsContent
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /payentry/v2/payentryimport
+  method: post
+  operationId: createPayrollBatch
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /payentry/v2/payentryimport/{timeImportFileTrackingId}
+  method: get
+  operationId: getPayrollBatchStatus
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /apihub/payrollhistory/v1/companies/{companyId}/employees/{employeeId}/paystatements
+  method: get
+  operationId: listPayStatements
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/codes
+  method: get
+  operationId: listCompanyCodes
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v2/companies/{companyId}/openapi
+  method: get
+  operationId: getCompanyOpenApi
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /compliance/backgroundcheck/screeningpackages
+  method: get
+  operationId: listScreeningPackages
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /compliance/backgroundcheck/candidatescreeningorders/subscription
+  method: post
+  operationId: createBackgroundCheckSubscription
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /compliance/backgroundcheck/candidatescreeningorders/subscription
+  method: delete
+  operationId: deleteBackgroundCheckSubscription
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
