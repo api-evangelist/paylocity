@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: Paylocity Integrations REST Background Check API
+  description: The Paylocity Integrations API exposes employees, demographics, status, pay rates, earnings, deductions, local/state taxes, onboarding, payroll history, time and labor, scheduling, learning management, background check, and custom-field data. Authentication uses OAuth 2.0 client credentials issued by Paylocity. API hosts include api.paylocity.com (production) and a sandbox tenant provided after partner approval.
+  version: '2.0'
+  contact:
+    name: Paylocity Developer Portal
+    url: https://developer.paylocity.com/
+servers:
+- url: https://api.paylocity.com
+  description: Production
+security:
+- oauth2ClientCredentials: []
+tags:
+- name: Background Check
+paths:
+  /compliance/backgroundcheck/screeningpackages:
+    get:
+      tags:
+      - Background Check
+      summary: List background check screening packages
+      operationId: listScreeningPackages
+      responses:
+        '200':
+          description: A list of screening packages.
+  /compliance/backgroundcheck/candidatescreeningorders/subscription:
+    post:
+      tags:
+      - Background Check
+      summary: Create background check webhook subscription
+      operationId: createBackgroundCheckSubscription
+      responses:
+        '201':
+          description: Subscription created.
+    delete:
+      tags:
+      - Background Check
+      summary: Delete background check webhook subscription
+      operationId: deleteBackgroundCheckSubscription
+      responses:
+        '200':
+          description: Subscription deleted.
+components:
+  securitySchemes:
+    oauth2ClientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.paylocity.com/IdentityServer/connect/token
+          scopes: {}
+      description: OAuth 2.0 client credentials grant. Credentials are provisioned by Paylocity.

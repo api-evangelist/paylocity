@@ -1,0 +1,53 @@
+openapi: 3.1.0
+info:
+  title: Paylocity Integrations REST Background Check Deductions API
+  description: The Paylocity Integrations API exposes employees, demographics, status, pay rates, earnings, deductions, local/state taxes, onboarding, payroll history, time and labor, scheduling, learning management, background check, and custom-field data. Authentication uses OAuth 2.0 client credentials issued by Paylocity. API hosts include api.paylocity.com (production) and a sandbox tenant provided after partner approval.
+  version: '2.0'
+  contact:
+    name: Paylocity Developer Portal
+    url: https://developer.paylocity.com/
+servers:
+- url: https://api.paylocity.com
+  description: Production
+security:
+- oauth2ClientCredentials: []
+tags:
+- name: Deductions
+paths:
+  /api/v2/companies/{companyId}/employees/{employeeId}/deductions:
+    parameters:
+    - name: companyId
+      in: path
+      required: true
+      schema:
+        type: string
+    - name: employeeId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Deductions
+      summary: List employee deductions
+      operationId: listDeductions
+      responses:
+        '200':
+          description: A list of deductions.
+    post:
+      tags:
+      - Deductions
+      summary: Upsert employee deduction
+      operationId: upsertDeduction
+      responses:
+        '200':
+          description: Deduction upserted.
+components:
+  securitySchemes:
+    oauth2ClientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.paylocity.com/IdentityServer/connect/token
+          scopes: {}
+      description: OAuth 2.0 client credentials grant. Credentials are provisioned by Paylocity.

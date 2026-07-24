@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Paylocity Integrations REST Background Check Company API
+  description: The Paylocity Integrations API exposes employees, demographics, status, pay rates, earnings, deductions, local/state taxes, onboarding, payroll history, time and labor, scheduling, learning management, background check, and custom-field data. Authentication uses OAuth 2.0 client credentials issued by Paylocity. API hosts include api.paylocity.com (production) and a sandbox tenant provided after partner approval.
+  version: '2.0'
+  contact:
+    name: Paylocity Developer Portal
+    url: https://developer.paylocity.com/
+servers:
+- url: https://api.paylocity.com
+  description: Production
+security:
+- oauth2ClientCredentials: []
+tags:
+- name: Company
+paths:
+  /api/v2/companies/{companyId}/codes:
+    parameters:
+    - name: companyId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Company
+      summary: List all company codes
+      operationId: listCompanyCodes
+      responses:
+        '200':
+          description: A list of company codes.
+  /api/v2/companies/{companyId}/openapi:
+    parameters:
+    - name: companyId
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Company
+      summary: Get company-specific OpenAPI document
+      operationId: getCompanyOpenApi
+      responses:
+        '200':
+          description: OpenAPI document.
+components:
+  securitySchemes:
+    oauth2ClientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.paylocity.com/IdentityServer/connect/token
+          scopes: {}
+      description: OAuth 2.0 client credentials grant. Credentials are provisioned by Paylocity.
