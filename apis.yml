@@ -8,7 +8,19 @@ description: Paylocity is a cloud-based human capital management (HCM) and payro
   employee, payroll, deduction, earning, and onboarding data for partner integrations
   and customer automations.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/paylocity.png
 tags:
 - HR
 - Payroll
@@ -23,10 +35,10 @@ specificationVersion: '0.19'
 apis:
 - aid: paylocity:rest-api
   name: Paylocity Integrations REST API
-  description: REST API for managing employees, demographics, status, pay rates, direct
-    deposit, deductions, earnings, taxes, custom fields, company codes, and onboarding
-    via the Paylocity Integrations platform. Authentication uses OAuth 2.0 client
-    credentials issued by the Paylocity Identity Provider; tokens expire after one
+  description: >-
+    REST API for managing employees, demographics, status, pay rates, direct deposit, deductions, earnings,
+    taxes, custom fields, company codes, and onboarding via the Paylocity Integrations platform. Authentication
+    uses OAuth 2.0 client credentials issued by the Paylocity Identity Provider; tokens expire after one
     hour.
   humanURL: https://developer.paylocity.com/integrations/reference/api-overview
   baseURL: https://api.paylocity.com/api
@@ -48,6 +60,106 @@ apis:
     url: https://apisandbox.paylocity.com
   - url: graphql/paylocity-graphql.md
     type: GraphQL
+- aid: paylocity:paylocity-background-check-api
+  name: Paylocity Background Check API
+  description: The Background Check API from Paylocity — 2 operation(s) for background check.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Background Check
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-background-check-api-openapi.yml
+- aid: paylocity:paylocity-company-api
+  name: Paylocity Company API
+  description: The Company API from Paylocity — 2 operation(s) for company.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Company
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-company-api-openapi.yml
+- aid: paylocity:paylocity-deductions-api
+  name: Paylocity Deductions API
+  description: The Deductions API from Paylocity — 1 operation(s) for deductions.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Deductions
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-deductions-api-openapi.yml
+- aid: paylocity:paylocity-earnings-api
+  name: Paylocity Earnings API
+  description: The Earnings API from Paylocity — 2 operation(s) for earnings.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Earnings
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-earnings-api-openapi.yml
+- aid: paylocity:paylocity-employees-api
+  name: Paylocity Employees API
+  description: The Employees API from Paylocity — 3 operation(s) for employees.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Employees
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-employees-api-openapi.yml
+- aid: paylocity:paylocity-lms-api
+  name: Paylocity LMS API
+  description: The LMS API from Paylocity — 1 operation(s) for lms.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - LMS
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-lms-api-openapi.yml
+- aid: paylocity:paylocity-payroll-api
+  name: Paylocity Payroll API
+  description: The Payroll API from Paylocity — 3 operation(s) for payroll.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Payroll
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-payroll-api-openapi.yml
+- aid: paylocity:paylocity-scheduling-api
+  name: Paylocity Scheduling API
+  description: The Scheduling API from Paylocity — 3 operation(s) for scheduling.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Scheduling
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-scheduling-api-openapi.yml
+- aid: paylocity:paylocity-taxes-api
+  name: Paylocity Taxes API
+  description: The Taxes API from Paylocity — 2 operation(s) for taxes.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Taxes
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-taxes-api-openapi.yml
+- aid: paylocity:paylocity-time-api
+  name: Paylocity Time API
+  description: The Time API from Paylocity — 2 operation(s) for time.
+  humanURL: https://developer.paylocity.com/integrations/reference/api-overview
+  baseURL: https://api.paylocity.com/api
+  tags:
+  - Time
+  properties:
+  - type: OpenAPI
+    url: openapi/paylocity-time-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/paylocity-agentic-access.yml
