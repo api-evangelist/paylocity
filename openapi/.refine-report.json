@@ -1,0 +1,32 @@
+{
+  "provider": "paylocity",
+  "sources": [
+    "paylocity-background-check-api-openapi.yml",
+    "paylocity-company-api-openapi.yml",
+    "paylocity-deductions-api-openapi.yml",
+    "paylocity-earnings-api-openapi.yml",
+    "paylocity-employees-api-openapi.yml",
+    "paylocity-lms-api-openapi.yml",
+    "paylocity-payroll-api-openapi.yml",
+    "paylocity-scheduling-api-openapi.yml",
+    "paylocity-taxes-api-openapi.yml",
+    "paylocity-time-api-openapi.yml"
+  ],
+  "outputs": [
+    "paylocity-background-check-api-openapi.yml",
+    "paylocity-company-api-openapi.yml",
+    "paylocity-deductions-api-openapi.yml",
+    "paylocity-earnings-api-openapi.yml",
+    "paylocity-employees-api-openapi.yml",
+    "paylocity-lms-api-openapi.yml",
+    "paylocity-payroll-api-openapi.yml",
+    "paylocity-scheduling-api-openapi.yml",
+    "paylocity-taxes-api-openapi.yml",
+    "paylocity-time-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

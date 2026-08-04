@@ -1,0 +1,433 @@
+openapi: 3.1.0
+info:
+  title: Paylocity Integrations REST API
+  description: >-
+    The Paylocity Integrations API exposes employees, demographics, status, pay
+    rates, earnings, deductions, local/state taxes, onboarding, payroll history,
+    time and labor, scheduling, learning management, background check, and
+    custom-field data. Authentication uses OAuth 2.0 client credentials issued
+    by Paylocity. API hosts include api.paylocity.com (production) and a
+    sandbox tenant provided after partner approval.
+  version: "2.0"
+  contact:
+    name: Paylocity Developer Portal
+    url: https://developer.paylocity.com/
+servers:
+  - url: https://api.paylocity.com
+    description: Production
+security:
+  - oauth2ClientCredentials: []
+tags:
+  - name: Employees
+  - name: Earnings
+  - name: Deductions
+  - name: Taxes
+  - name: Time
+  - name: Scheduling
+  - name: LMS
+  - name: Payroll
+  - name: Background Check
+  - name: Company
+paths:
+  /api/v2/companies/{companyId}/employees:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Employees]
+      summary: List employees
+      operationId: listEmployees
+      responses:
+        '200':
+          description: A list of employees.
+    post:
+      tags: [Employees]
+      summary: Add a new employee
+      operationId: addEmployee
+      responses:
+        '201':
+          description: Employee created.
+  /api/v2/companies/{companyId}/employees/{employeeId}:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Employees]
+      summary: Get employee
+      operationId: getEmployee
+      responses:
+        '200':
+          description: Employee details.
+    patch:
+      tags: [Employees]
+      summary: Update employee
+      operationId: updateEmployee
+      responses:
+        '200':
+          description: Employee updated.
+  /api/v2/companies/{companyId}/employees/{employeeId}/onboarding:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Employees]
+      summary: Onboard employee
+      operationId: onboardEmployee
+      responses:
+        '200':
+          description: Employee onboarded.
+  /api/v2/companies/{companyId}/employees/{employeeId}/earnings:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Earnings]
+      summary: List employee earnings
+      operationId: listEarnings
+      responses:
+        '200':
+          description: A list of earnings.
+    post:
+      tags: [Earnings]
+      summary: Upsert employee earning
+      operationId: upsertEarning
+      responses:
+        '200':
+          description: Earning upserted.
+  /api/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: earningCode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: startDate
+        in: path
+        required: true
+        schema:
+          type: string
+          format: date
+    get:
+      tags: [Earnings]
+      summary: Get a specific earning entry
+      operationId: getEarning
+      responses:
+        '200':
+          description: Earning details.
+    delete:
+      tags: [Earnings]
+      summary: Delete a specific earning entry
+      operationId: deleteEarning
+      responses:
+        '200':
+          description: Earning deleted.
+  /api/v2/companies/{companyId}/employees/{employeeId}/deductions:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Deductions]
+      summary: List employee deductions
+      operationId: listDeductions
+      responses:
+        '200':
+          description: A list of deductions.
+    post:
+      tags: [Deductions]
+      summary: Upsert employee deduction
+      operationId: upsertDeduction
+      responses:
+        '200':
+          description: Deduction upserted.
+  /api/v2/companies/{companyId}/employees/{employeeId}/localtax:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Taxes]
+      summary: List local taxes for employee
+      operationId: listLocalTaxes
+      responses:
+        '200':
+          description: A list of local taxes.
+    post:
+      tags: [Taxes]
+      summary: Add a local tax
+      operationId: addLocalTax
+      responses:
+        '201':
+          description: Local tax added.
+  /api/v2/companies/{companyId}/employees/{employeeId}/statetax/primary:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Taxes]
+      summary: Upsert primary state tax
+      operationId: upsertPrimaryStateTax
+      responses:
+        '200':
+          description: Primary state tax upserted.
+  /apihub/time/v2/companies/{companyId}/punchdetails:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    post:
+      tags: [Time]
+      summary: Submit punch details batch
+      operationId: createPunchDetails
+      responses:
+        '202':
+          description: Punch details accepted for processing.
+  /apihub/time/v2/companies/{companyId}/employees/{employeeId}/punchdetails:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Time]
+      summary: Get punch details for an employee
+      operationId: getEmployeePunchDetails
+      responses:
+        '200':
+          description: A list of punch details.
+  /apihub/scheduling/v1/companies/{companyId}/shifts:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Scheduling]
+      summary: List shifts
+      operationId: listShifts
+      responses:
+        '200':
+          description: A list of shifts.
+  /apihub/scheduling/v1/companies/{companyId}/employees/{employeeId}/shifts:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Scheduling]
+      summary: List employee shifts
+      operationId: listEmployeeShifts
+      responses:
+        '200':
+          description: A list of employee shifts.
+  /apihub/scheduling/v1/companies/{companyId}/openshifts:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Scheduling]
+      summary: List open shifts
+      operationId: listOpenShifts
+      responses:
+        '200':
+          description: A list of open shifts.
+  /apihub/learningmanagementsystem/v1/companies/{companyId}/contents:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [LMS]
+      summary: List LMS contents
+      operationId: listLmsContents
+      responses:
+        '200':
+          description: A list of LMS content.
+    post:
+      tags: [LMS]
+      summary: Create LMS content
+      operationId: createLmsContent
+      responses:
+        '201':
+          description: LMS content created.
+  /payentry/v2/payentryimport:
+    post:
+      tags: [Payroll]
+      summary: Create a new payroll batch
+      operationId: createPayrollBatch
+      responses:
+        '202':
+          description: Payroll batch accepted.
+  /payentry/v2/payentryimport/{timeImportFileTrackingId}:
+    parameters:
+      - name: timeImportFileTrackingId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Payroll]
+      summary: Get payroll batch status
+      operationId: getPayrollBatchStatus
+      responses:
+        '200':
+          description: Payroll batch status.
+  /apihub/payrollhistory/v1/companies/{companyId}/employees/{employeeId}/paystatements:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: employeeId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Payroll]
+      summary: List employee pay statements
+      operationId: listPayStatements
+      responses:
+        '200':
+          description: A list of pay statements.
+  /api/v2/companies/{companyId}/codes:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Company]
+      summary: List all company codes
+      operationId: listCompanyCodes
+      responses:
+        '200':
+          description: A list of company codes.
+  /api/v2/companies/{companyId}/openapi:
+    parameters:
+      - name: companyId
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      tags: [Company]
+      summary: Get company-specific OpenAPI document
+      operationId: getCompanyOpenApi
+      responses:
+        '200':
+          description: OpenAPI document.
+  /compliance/backgroundcheck/screeningpackages:
+    get:
+      tags: [Background Check]
+      summary: List background check screening packages
+      operationId: listScreeningPackages
+      responses:
+        '200':
+          description: A list of screening packages.
+  /compliance/backgroundcheck/candidatescreeningorders/subscription:
+    post:
+      tags: [Background Check]
+      summary: Create background check webhook subscription
+      operationId: createBackgroundCheckSubscription
+      responses:
+        '201':
+          description: Subscription created.
+    delete:
+      tags: [Background Check]
+      summary: Delete background check webhook subscription
+      operationId: deleteBackgroundCheckSubscription
+      responses:
+        '200':
+          description: Subscription deleted.
+components:
+  securitySchemes:
+    oauth2ClientCredentials:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://api.paylocity.com/IdentityServer/connect/token
+          scopes: {}
+      description: OAuth 2.0 client credentials grant. Credentials are provisioned by Paylocity.
