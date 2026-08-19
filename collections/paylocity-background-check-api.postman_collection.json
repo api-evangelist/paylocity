@@ -1,0 +1,256 @@
+{
+  "item": [
+    {
+      "id": "b9b747bc-0a50-4fe1-86cb-795a10b1d7f0",
+      "name": "Background Check",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c4f5f07d-02df-457e-b00d-dd22673a0170",
+          "name": "List background check screening packages",
+          "request": {
+            "name": "List background check screening packages",
+            "description": {},
+            "url": {
+              "path": [
+                "compliance",
+                "backgroundcheck",
+                "screeningpackages"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f2d5f67a-87ae-4ba7-bb61-79a2f640b7a8",
+              "name": "A list of screening packages.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "compliance",
+                    "backgroundcheck",
+                    "screeningpackages"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3af54bf7-3ad6-4ac0-9652-6c03f64c4b1e",
+          "name": "Create background check webhook subscription",
+          "request": {
+            "name": "Create background check webhook subscription",
+            "description": {},
+            "url": {
+              "path": [
+                "compliance",
+                "backgroundcheck",
+                "candidatescreeningorders",
+                "subscription"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c396f68c-c0ed-421e-9003-046557d3a5cf",
+              "name": "Subscription created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "compliance",
+                    "backgroundcheck",
+                    "candidatescreeningorders",
+                    "subscription"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8a486add-8b5e-4402-9b06-77b2d3365633",
+          "name": "Delete background check webhook subscription",
+          "request": {
+            "name": "Delete background check webhook subscription",
+            "description": {},
+            "url": {
+              "path": [
+                "compliance",
+                "backgroundcheck",
+                "candidatescreeningorders",
+                "subscription"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5b813548-5cfa-4dd2-873c-b0a83dab445f",
+              "name": "Subscription deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "compliance",
+                    "backgroundcheck",
+                    "candidatescreeningorders",
+                    "subscription"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.paylocity.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.paylocity.com/IdentityServer/connect/token"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8cb12507-6412-4085-bc92-376711de40c4",
+    "name": "Paylocity Integrations REST Background Check API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Paylocity Integrations API exposes employees, demographics, status, pay rates, earnings, deductions, local/state taxes, onboarding, payroll history, time and labor, scheduling, learning management, background check, and custom-field data. Authentication uses OAuth 2.0 client credentials issued by Paylocity. API hosts include api.paylocity.com (production) and a sandbox tenant provided after partner approval.\n\nContact Support:\n Name: Paylocity Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

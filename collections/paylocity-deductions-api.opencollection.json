@@ -1,0 +1,75 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Paylocity Integrations REST Background Check Deductions API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "client_credentials",
+      "accessTokenUrl": "https://api.paylocity.com/IdentityServer/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Deductions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List employee deductions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/deductions",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List employee deductions"
+        },
+        {
+          "info": {
+            "name": "Upsert employee deduction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.paylocity.com/api/v2/companies/:companyId/employees/:employeeId/deductions",
+            "params": [
+              {
+                "name": "companyId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "employeeId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Upsert employee deduction"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
