@@ -48,6 +48,13 @@ apis:
   - Employees
   - Deductions
   - Earnings
+  - Authentication
+  tags_raw:
+  - HR
+  - Payroll
+  - Employees
+  - Deductions
+  - Earnings
   - OAuth 2.0
   properties:
   - type: Documentation
