@@ -8,6 +8,18 @@ description: Paylocity is a cloud-based human capital management (HCM) and payro
   employee, payroll, deduction, earning, and onboarding data for partner integrations
   and customer automations.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
