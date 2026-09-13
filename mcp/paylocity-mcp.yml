@@ -1,0 +1,29 @@
+generated: '2026-09-11'
+method: probed
+source: https://developer.paylocity.com/mcp?project=integrations
+status: published
+server:
+  name: paylocity
+  transport: http
+  url: https://developer.paylocity.com/mcp?project=integrations
+deployment:
+  mode: remote
+  endpoint: https://developer.paylocity.com/mcp?project=integrations
+  verified: probed
+  probe: live
+  checked: '2026-09-11'
+  source: docs-check 2026-09-11 (endpoint found in the provider's own documentation, then probed)
+tools_count: 5
+tools:
+- name: list-endpoints
+  description: ''
+- name: get-endpoint
+  description: ''
+- name: search-endpoints
+  description: ''
+- name: list-specs
+  description: ''
+- name: execute-request
+  description: ''
+tools_source: live tools/list via initialize handshake, 2026-09-11 (signals/audit_mcp_authorship.py --probe)
+authorship: provider
