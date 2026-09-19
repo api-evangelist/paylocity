@@ -34,6 +34,13 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/paylocity.png
 tags:
+- Human Resources
+- Payroll
+- HCM
+- Benefits
+- Workforce Management
+- Time Tracking
+tags_raw:
 - HR
 - Payroll
 - HCM
@@ -55,7 +62,7 @@ apis:
   humanURL: https://developer.paylocity.com/integrations/reference/api-overview
   baseURL: https://api.paylocity.com/api
   tags:
-  - HR
+  - Human Resources
   - Payroll
   - Employees
   - Deductions
@@ -85,6 +92,8 @@ apis:
   humanURL: https://developer.paylocity.com/integrations/reference/api-overview
   baseURL: https://api.paylocity.com/api
   tags:
+  - Background Checks
+  tags_raw:
   - Background Check
   properties:
   - type: OpenAPI
@@ -165,6 +174,8 @@ apis:
   humanURL: https://developer.paylocity.com/integrations/reference/api-overview
   baseURL: https://api.paylocity.com/api
   tags:
+  - Tax
+  tags_raw:
   - Taxes
   properties:
   - type: OpenAPI
