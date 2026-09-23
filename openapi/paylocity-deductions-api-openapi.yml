@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Paylocity Integrations REST Background Check Deductions API
+  title: Paylocity Integrations REST Deductions API
   description: The Paylocity Integrations API exposes employees, demographics, status, pay rates, earnings, deductions, local/state taxes, onboarding, payroll history, time and labor, scheduling, learning management, background check, and custom-field data. Authentication uses OAuth 2.0 client credentials issued by Paylocity. API hosts include api.paylocity.com (production) and a sandbox tenant provided after partner approval.
   version: '2.0'
   contact:

@@ -1,16 +1,7 @@
 {
   "provider": "paylocity",
   "sources": [
-    "paylocity-background-check-api-openapi.yml",
-    "paylocity-company-api-openapi.yml",
-    "paylocity-deductions-api-openapi.yml",
-    "paylocity-earnings-api-openapi.yml",
-    "paylocity-employees-api-openapi.yml",
-    "paylocity-lms-api-openapi.yml",
-    "paylocity-payroll-api-openapi.yml",
-    "paylocity-scheduling-api-openapi.yml",
-    "paylocity-taxes-api-openapi.yml",
-    "paylocity-time-api-openapi.yml"
+    "_original/paylocity-openapi.yml"
   ],
   "outputs": [
     "paylocity-background-check-api-openapi.yml",
@@ -27,6 +18,21 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "paylocity-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "paylocity-background-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-company-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-deductions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-earnings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-employees-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-lms-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-payroll-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-scheduling-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-taxes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "paylocity-time-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
