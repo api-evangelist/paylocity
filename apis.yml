@@ -84,8 +84,6 @@ apis:
     url: https://developer.paylocity.com/integrations/reference/authentication
   - type: Sandbox
     url: https://apisandbox.paylocity.com
-  - url: graphql/paylocity-graphql.md
-    type: GraphQL
 - aid: paylocity:paylocity-background-check-api
   name: Paylocity Background Check API
   description: The Background Check API from Paylocity — 2 operation(s) for background check.
