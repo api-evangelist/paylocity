@@ -40,6 +40,7 @@ tags:
 - Benefits
 - Workforce Management
 - Time Tracking
+- Employee Benefits
 tags_raw:
 - HR
 - Payroll
@@ -47,6 +48,7 @@ tags_raw:
 - Benefits
 - Workforce Management
 - Time Tracking
+- Employee Benefits
 url: https://raw.githubusercontent.com/api-evangelist/paylocity/refs/heads/main/apis.yml
 created: '2026-05-11'
 modified: '2026-05-11'
