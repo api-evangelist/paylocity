@@ -1,0 +1,92 @@
+slug: paylocity
+provider: Paylocity
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 8
+edges:
+- tag: LMS
+  spec_file: paylocity-lms-api-openapi.yml
+  capability_id: BC-300.40
+  capability_id_l1: BC-300
+  capability_name: Learning & Development Management
+  confidence: 0.9
+  evidence: POST /apihub/learningmanagementsystem/v1/companies/{companyId}/contents  Create LMS content
+  reason: Learning management system content administration is squarely Learning & Development Management
+    within HCM.
+- tag: Payroll
+  spec_file: paylocity-payroll-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.9
+  evidence: POST /payentry/v2/payentryimport  Create a new payroll batch; GET .../paystatements  List
+    employee pay statements
+  reason: Payroll batch submission and pay statement retrieval is payroll administration, an explicit
+    part of HR Operations Management.
+- tag: Employees
+  spec_file: paylocity-employees-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.82
+  evidence: POST /api/v2/companies/{companyId}/employees  Add a new employee; POST .../onboarding  Onboard
+    employee
+  reason: CRUD over employee master records on an HCM platform is employee record keeping (HR Operations);
+    the onboarding operation also touches Talent Acquisition, so the L2 split is slightly ambiguous.
+- tag: Background Check
+  spec_file: paylocity-background-check-api-openapi.yml
+  capability_id: BC-300.10
+  capability_id_l1: BC-300
+  capability_name: Talent Acquisition Management
+  confidence: 0.72
+  evidence: GET /compliance/backgroundcheck/screeningpackages  List background check screening packages;
+    POST .../candidatescreeningorders/subscription
+  reason: Candidate screening / background-check ordering is part of the hiring process on an HCM platform,
+    mapping to Talent Acquisition. Partly webhook plumbing, and the L2 placement (hiring vs. compliance)
+    is somewhat ambiguous, so confidence is moderate.
+- tag: Deductions
+  spec_file: paylocity-deductions-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.72
+  evidence: GET /api/v2/companies/{companyId}/employees/{employeeId}/deductions  List employee deductions
+  reason: Employee payroll deduction records on an HCM/payroll platform fall under HR Operations / payroll
+    administration; could alternatively sit under Compensation & Benefits, hence moderate confidence on
+    the L2.
+- tag: Scheduling
+  spec_file: paylocity-scheduling-api-openapi.yml
+  capability_id: BC-300
+  capability_id_l1: BC-300
+  capability_name: Human Capital Management
+  confidence: 0.72
+  evidence: GET /apihub/scheduling/v1/companies/{companyId}/openshifts  List open shifts
+  reason: Shift scheduling is workforce management within HCM, but no candidate L2 cleanly covers operational
+    shift scheduling (Workforce Planning is strategic), so only the L1 is asserted.
+- tag: Time
+  spec_file: paylocity-time-api-openapi.yml
+  capability_id: BC-300
+  capability_id_l1: BC-300
+  capability_name: Human Capital Management
+  confidence: 0.72
+  evidence: POST /apihub/time/v2/companies/{companyId}/punchdetails  Submit punch details batch
+  reason: Clock punch capture is time-and-labor tracking within Human Capital Management; no candidate
+    L2 specifically covers time and attendance, so only the L1 is asserted.
+- tag: Earnings
+  spec_file: paylocity-earnings-api-openapi.yml
+  capability_id: BC-300.70
+  capability_id_l1: BC-300
+  capability_name: HR Operations Management
+  confidence: 0.7
+  evidence: POST /api/v2/companies/{companyId}/employees/{employeeId}/earnings  Upsert employee earning
+  reason: Per-employee earning codes and amounts are payroll data maintenance; clearly Human Capital Management,
+    with payroll administration the best-fitting L2 though Compensation & Benefits is arguable.

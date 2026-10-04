@@ -191,6 +191,9 @@ apis:
   - type: OpenAPI
     url: openapi/paylocity-time-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/paylocity-capability-edges.yml
+  name: Paylocity Business Capability Map
 - type: AgenticAccess
   url: agentic-access/paylocity-agentic-access.yml
 - type: VulnerabilityDisclosure
