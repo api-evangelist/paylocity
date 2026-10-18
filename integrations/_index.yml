@@ -52,5 +52,5 @@
     - connectors/applications/paylocity
     vendor_link: https://www.paylocity.com/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
